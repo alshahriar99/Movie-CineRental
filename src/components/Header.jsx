@@ -3,12 +3,19 @@ import logo from "../assets/logo.svg";
 import moon from "../assets/icons/moon.svg";
 import adToCard from "../assets/shopping-cart.svg";
 import ring from "../assets/ring.svg";
+import Sun from "../assets/icons/sun.svg";
+
 import Card from "./card";
-import { MovieContext } from "../context/Context";
+import { MovieContext, ThemeContext } from "../context/Context";
 
 const Header = () => {
   const [showCart, setShowCart] = useState(false);
   const { cardData } = useContext(MovieContext);
+  const { theme, setTheme } = useContext(ThemeContext);
+
+
+
+
   console.log(cardData);
   return (
     <header>
@@ -31,8 +38,9 @@ const Header = () => {
             <a
               className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
+              onClick={() => setTheme(theme => !theme)}
             >
-              <img src={moon} width="24" height="24" alt="" />
+              <img src={ theme? Sun: moon} width="24" height="24" alt="" />
             </a>
           </li>
           <li>

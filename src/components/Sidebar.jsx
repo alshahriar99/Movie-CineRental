@@ -14,21 +14,17 @@ const Sidebar = () => {
             className="flex items-center space-x-2 px-5 py-3.5 rounded-lg bg-[#00D991] text-black"
             href="#"
           >
-            <img
-              src={trandingIcon}
-              width="24"
-              height="24"
-              alt=""
-            />
+            <img src={trandingIcon} width="24" height="24" alt="" />
             <span>Trending</span>
           </a>
         </li>
-        <li>
+        <li className="dark:border dark:border-white/10 rounded-lg">
           <a
-            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
+            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg "
             href="#"
           >
             <img
+              className="dark:bg-white"
               src={newRelaease}
               width="24"
               height="24"
@@ -37,12 +33,13 @@ const Sidebar = () => {
             <span>New Releases</span>
           </a>
         </li>
-        <li>
+        <li className="dark:border dark:border-white/10 rounded-lg">
           <a
             className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
             href="#"
           >
             <img
+              className="dark:bg-white"
               src={commingSoon}
               width="24"
               height="24"
@@ -51,12 +48,13 @@ const Sidebar = () => {
             <span>Coming Soon</span>
           </a>
         </li>
-        <li>
+        <li className="dark:border dark:border-white/10 rounded-lg">
           <a
-            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
+            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg "
             href="#"
           >
             <img
+              className="dark:bg-white"
               src={favourite}
               width="24"
               height="24"
@@ -65,12 +63,13 @@ const Sidebar = () => {
             <span>Favourites</span>
           </a>
         </li>
-        <li>
+        <li className="dark:border dark:border-white/10 rounded-lg">
           <a
-            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
+            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg "
             href="#"
           >
             <img
+              className="dark:bg-white"
               src={watchLater}
               width="24"
               height="24"
