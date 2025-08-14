@@ -1,9 +1,11 @@
 import React from "react";
-import trandingIcon from "../assets/icons/trending.svg";
-import newRelaease from "../assets/icons/trending.svg";
-import commingSoon from "../assets/icons/trending.svg";
-import favourite from "../assets/icons/trending.svg";
-import watchLater from "../assets/icons/trending.svg";
+import { FaHome } from "react-icons/fa";
+import { MdOutlineTrendingUp } from "react-icons/md";
+import TrendingIcon from "../assets/icons/trending.svg";
+import NewRelease from "../assets/icons/newRelease.svg";
+import ComingSoon from "../assets/icons/commingSoon.svg";
+import Favorite from "../assets/icons/favourite.svg";
+import watchLater from "../assets/icons/watchLater.svg";
 
 const Sidebar = () => {
   return (
@@ -14,7 +16,19 @@ const Sidebar = () => {
             className="flex items-center space-x-2 px-5 py-3.5 rounded-lg bg-[#00D991] text-black"
             href="#"
           >
-            <img src={trandingIcon} width="24" height="24" alt="" />
+            <FaHome width="24" height="24" />
+
+            <span>Home</span>
+          </a>
+        </li>
+        <hr className="mt-4 mb-4" />
+        <li className="dark:border dark:border-white/10 rounded-lg">
+          <a
+            className="flex items-center space-x-2 px-5 py-3.5 rounded-lg "
+            href="#"
+          >
+            <MdOutlineTrendingUp className="w-7 h-7" />
+
             <span>Trending</span>
           </a>
         </li>
@@ -23,13 +37,7 @@ const Sidebar = () => {
             className="flex items-center space-x-2 px-5 py-3.5 rounded-lg "
             href="#"
           >
-            <img
-              className="dark:bg-white"
-              src={newRelaease}
-              width="24"
-              height="24"
-              alt=""
-            />
+            <img src={NewRelease} width="24" height="24" alt="" />
             <span>New Releases</span>
           </a>
         </li>
@@ -38,13 +46,7 @@ const Sidebar = () => {
             className="flex items-center space-x-2 px-5 py-3.5 rounded-lg"
             href="#"
           >
-            <img
-              className="dark:bg-white"
-              src={commingSoon}
-              width="24"
-              height="24"
-              alt=""
-            />
+            <img src={ComingSoon} width="24" height="24" alt="" />
             <span>Coming Soon</span>
           </a>
         </li>
@@ -53,13 +55,7 @@ const Sidebar = () => {
             className="flex items-center space-x-2 px-5 py-3.5 rounded-lg "
             href="#"
           >
-            <img
-              className="dark:bg-white"
-              src={favourite}
-              width="24"
-              height="24"
-              alt=""
-            />
+            <img src={Favorite} width="24" height="24" alt="" />
             <span>Favourites</span>
           </a>
         </li>
@@ -68,13 +64,7 @@ const Sidebar = () => {
             className="flex items-center space-x-2 px-5 py-3.5 rounded-lg "
             href="#"
           >
-            <img
-              className="dark:bg-white"
-              src={watchLater}
-              width="24"
-              height="24"
-              alt=""
-            />
+            <img src={watchLater} width="24" height="24" alt="" />
             <span>Watch Later</span>
           </a>
         </li>

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import MovieList from "./components/MovieList";
 import Sidebar from "./components/Sidebar";
 import { MovieContext, ThemeContext } from "./context/Context";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [cardData, setCardData] = useState([]);
@@ -22,6 +23,7 @@ function App() {
               </div>
             </main>
             <Footer />
+            <ToastContainer />
           </div>
         </MovieContext.Provider>
       </ThemeContext.Provider>

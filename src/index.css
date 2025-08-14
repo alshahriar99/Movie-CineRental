@@ -6,10 +6,10 @@
    .container{
     @apply mx-auto px-4;
    }
-
    .primary{
     color:#00D991;
    }
+   
    .dark {
     @apply bg-[#171923] text-white
 }

@@ -3,6 +3,7 @@ import { getImageUrl } from "../utils/cine-utility";
 import Rating from "./Rating";
 import MovieCardModel from "./MovieCardModel";
 import { MovieContext } from "../context/Context";
+import { toast } from "react-toastify";
 
 const MovieCard = ({ movie }) => {
   const [showModal, setShowModal] = useState(false);
@@ -22,8 +23,12 @@ const MovieCard = ({ movie }) => {
 
     if(!existingMovie){
       setCardData([...cardData, movie])
+      toast.success(`${movie.title} added to cart`, {
+        position: "bottom-right"})
     }else{
-      console.log("Movie already in cart");
+      toast.error(`${movie.title} is already in cart`, {
+        position: "bottom-right"})
+      return;
     }
   }
 
@@ -64,6 +69,7 @@ const MovieCard = ({ movie }) => {
             >
               <img src="../assets/tag.svg" alt="" />
               <span>${movie.price} | add To Card</span>
+
             </button>
           </figcaption>
         </a>
